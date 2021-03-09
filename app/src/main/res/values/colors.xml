@@ -17,4 +17,14 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="bg_color">#FFF7E8D6</color>
+    <color name="text_color">#FF33314B</color>
+    <color name="circle_progress_color">#FFF09F73</color>
+    <color name="circle_bg_color">#FFFFFF</color>
+    <color name="btn_bg_color">#FFFFFFFF</color>
+    <color name="btn_text_color">#FF99BEED</color>
+    <color name="btn_disabled_bg_color">#FF333333</color>
+    <color name="btn_disabled_text_color">#FF999999</color>
+    <color name="line_color">#FFEADBC5</color>
 </resources>

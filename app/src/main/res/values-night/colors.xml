@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_color">#FF121F3C</color>
+    <color name="text_color">#FFF3C9C9</color>
+    <color name="circle_progress_color">#FFEB5859</color>
+    <color name="circle_bg_color">#FFFFFF</color>
+    <color name="btn_bg_color">#FF1E3A3D</color>
+    <color name="btn_text_color">#FF9BA9A9</color>
+    <color name="btn_disabled_bg_color">#FF333333</color>
+    <color name="btn_disabled_text_color">#FF999999</color>
+    <color name="line_color">#FF1F2739</color>
+</resources>
