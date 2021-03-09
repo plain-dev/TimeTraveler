@@ -24,6 +24,7 @@ import com.example.androiddevchallenge.status.CompletedStatus
 import com.example.androiddevchallenge.status.NotStartedStatus
 import com.example.androiddevchallenge.status.PausedStatus
 import com.example.androiddevchallenge.status.StartedStatus
+import com.example.androiddevchallenge.utils.togetherReminder
 import com.example.androiddevchallenge.viewmodel.TimerViewModel
 
 class AnimatorController(private val viewModel: TimerViewModel) {
@@ -73,5 +74,6 @@ class AnimatorController(private val viewModel: TimerViewModel) {
     fun complete() {
         viewModel.totalTime = 0
         viewModel.status = CompletedStatus(viewModel)
+        togetherReminder()
     }
 }

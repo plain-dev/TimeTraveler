@@ -49,7 +49,9 @@ fun TimeTraveler(timerViewModel: TimerViewModel) {
     Surface(color = MaterialTheme.colors.background, modifier = Modifier.fillMaxSize()) {
         Title()
         Column(
-            modifier = Modifier.fillMaxSize().padding(vertical = 100.dp),
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(vertical = 100.dp),
             verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
@@ -64,10 +66,13 @@ fun TimeTraveler(timerViewModel: TimerViewModel) {
                     strokeWidth = 10.dp,
                     modifier = Modifier.fillMaxSize()
                 )
+                val completedString = timerViewModel.status.completedString().takeUnless {
+                    it.isEmpty()
+                }
                 Text(
                     fontWeight = FontWeight.Bold,
-                    text = timerViewModel.timeLeft.toTimeContent(),
-                    fontSize = 30.sp,
+                    text = completedString ?: timerViewModel.timeLeft.toTimeContent(),
+                    fontSize = completedString?.let { 25.sp } ?: 30.sp,
                     color = colorResource(id = R.color.text_color),
                 )
             }
