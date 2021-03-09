@@ -28,6 +28,7 @@
     </style>
 
     <style name="Theme.AndroidDevChallenge.NoActionBar">
+        <item name="android:windowBackground">@color/bg_color</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
