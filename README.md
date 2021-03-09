@@ -17,13 +17,20 @@ Participate in the [#AndroidDevChallenge](https://developer.android.com/dev-chal
 ## :camera_flash: Screenshots
 <!-- You can add more screenshots here if you like -->
 
-LIGHT MODE ☀
-
-<img src="/results/screenshot_1.png" width="260">&emsp;<img src="/results/screenshot_2.png" width="260">
-
-DARK MODE 🌙
-
-<img src="/results/screenshot_dark_1.png" width="260">&emsp;<img src="/results/screenshot_dark_2.png" width="260">
+<table>
+    <tr>
+        <td>LIGHT MODE ☀</td>
+        <td>LIGHT MODE ☀</td>
+        <td>DARK MODE 🌙</td>
+        <td>DARK MODE 🌙</td>
+   </tr>
+    <tr>
+        <td ><img src='/results/screenshot_1.png' /></td>
+        <td ><img src='/results/screenshot_2.png' /></td>
+        <td ><img src='/results/screenshot_dark_1.png' /></td>
+        <td ><img src='/results/screenshot_dark_2.png' /></td>
+    </tr>
+</table>
 
 ## License
 ```
