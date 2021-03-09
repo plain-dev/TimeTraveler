@@ -15,7 +15,11 @@
  */
 package com.example.androiddevchallenge.ui.common
 
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.OutlinedTextField
@@ -75,11 +79,13 @@ fun TimeInput(viewModel: TimerViewModel) {
                     keyboardType = KeyboardType.Number,
                     imeAction = ImeAction.Done
                 ),
-                keyboardActions = KeyboardActions(onDone = {
-                    "Click `Start` to start the countdown.".toast()
-                    // 收回键盘
-                    focusManager.clearFocus()
-                })
+                keyboardActions = KeyboardActions(
+                    onDone = {
+                        "Click `Start` to start the countdown.".toast()
+                        // 收回键盘
+                        focusManager.clearFocus()
+                    }
+                )
             )
         }
     }

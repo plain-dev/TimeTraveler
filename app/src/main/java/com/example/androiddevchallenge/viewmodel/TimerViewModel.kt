@@ -16,8 +16,8 @@
 package com.example.androiddevchallenge.viewmodel
 
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.setValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import com.example.androiddevchallenge.constant.MAX_INPUT_LENGTH
 import com.example.androiddevchallenge.controller.AnimatorController
@@ -66,5 +66,4 @@ class TimerViewModel : ViewModel() {
         timeLeft = value.toLong()
         if (status is CompletedStatus) status = NotStartedStatus(this)
     }
-
 }
