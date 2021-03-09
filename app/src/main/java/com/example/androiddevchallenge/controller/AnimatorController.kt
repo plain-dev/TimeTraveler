@@ -26,6 +26,7 @@ import com.example.androiddevchallenge.status.PausedStatus
 import com.example.androiddevchallenge.status.StartedStatus
 import com.example.androiddevchallenge.utils.togetherReminder
 import com.example.androiddevchallenge.viewmodel.TimerViewModel
+import kotlin.math.ceil
 
 class AnimatorController(private val viewModel: TimerViewModel) {
 
@@ -37,8 +38,10 @@ class AnimatorController(private val viewModel: TimerViewModel) {
             valueAnimator = ValueAnimator.ofInt(viewModel.totalTime.toInt() * ANIMATOR_SPEED, 0)
             valueAnimator?.interpolator = LinearInterpolator()
             valueAnimator?.addUpdateListener {
-                viewModel.animValue = (it.animatedValue as Int) / ANIMATOR_SPEED.toFloat()
-                viewModel.timeLeft = (it.animatedValue as Int).toLong() / ANIMATOR_SPEED
+                (it.animatedValue as Int / ANIMATOR_SPEED.toFloat()).let { currentValue ->
+                    viewModel.animValue = currentValue
+                    viewModel.timeLeft = ceil(currentValue).toLong()
+                }
             }
             valueAnimator?.addListener(object : AnimatorListenerAdapter() {
 
