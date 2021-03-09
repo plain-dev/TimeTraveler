@@ -41,9 +41,20 @@ class AnimatorController(private val viewModel: TimerViewModel) {
                 viewModel.timeLeft = (it.animatedValue as Int).toLong() / ANIMATOR_SPEED
             }
             valueAnimator?.addListener(object : AnimatorListenerAdapter() {
+
+                var isCancel = false
+
+                override fun onAnimationCancel(animation: Animator?) {
+                    isCancel = true
+                    super.onAnimationCancel(animation)
+                }
+
                 override fun onAnimationEnd(animation: Animator?) {
                     super.onAnimationEnd(animation)
-                    complete()
+                    if (!isCancel) {
+                        complete()
+                    }
+                    isCancel = false
                 }
             })
         } else {
