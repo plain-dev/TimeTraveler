@@ -15,6 +15,7 @@
  */
 package com.example.androiddevchallenge.ui.main
 
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -44,6 +45,7 @@ import com.example.androiddevchallenge.ui.progress.CircleProgress
 import com.example.androiddevchallenge.utils.toTimeContent
 import com.example.androiddevchallenge.viewmodel.TimerViewModel
 
+@ExperimentalAnimationApi
 @Composable
 fun TimeTraveler(timerViewModel: TimerViewModel) {
     Surface(color = MaterialTheme.colors.background, modifier = Modifier.fillMaxSize()) {

@@ -15,6 +15,8 @@
  */
 package com.example.androiddevchallenge.ui.common
 
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -45,6 +47,7 @@ import com.example.androiddevchallenge.viewmodel.TimerViewModel
  * @author Plain
  */
 
+@ExperimentalAnimationApi
 @Composable
 fun TimeInput(viewModel: TimerViewModel) {
     val focusManager = LocalFocusManager.current
@@ -55,7 +58,7 @@ fun TimeInput(viewModel: TimerViewModel) {
             .padding(horizontal = 60.dp),
         contentAlignment = Alignment.Center
     ) {
-        if (viewModel.status.showInputText()) {
+        AnimatedVisibility(visible = viewModel.status.showInputText()) {
             OutlinedTextField(
                 modifier = Modifier.fillMaxSize(),
                 value = if (viewModel.totalTime == 0L) "" else viewModel.totalTime.toString(),
